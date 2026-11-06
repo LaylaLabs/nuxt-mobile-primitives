@@ -1,0 +1,75 @@
+{
+  "name": "@laylalabs/nuxt-mobile-primitives",
+  "version": "0.1.0",
+  "description": "Essential mobile primitives and ergonomic UX utilities for Nuxt 3/4 and Capacitor: tactile haptics, software keyboard tracking, and passive event performance optimizations.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaylaLabs/nuxt-mobile-primitives.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LaylaLabs/nuxt-mobile-primitives/issues"
+  },
+  "homepage": "https://github.com/LaylaLabs/nuxt-mobile-primitives#readme",
+  "author": "LaylaLabs <dev@laylalabs.com>",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build prepare && nuxt-module-build build",
+    "build": "nuxt-module-build prepare && nuxt-module-build build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.6.4",
+    "defu": "^6.1.4"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=6.0.0",
+    "@capacitor/haptics": ">=6.0.0",
+    "@capacitor/keyboard": ">=6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@capacitor/core": {
+      "optional": true
+    },
+    "@capacitor/haptics": {
+      "optional": true
+    },
+    "@capacitor/keyboard": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/haptics": "^7.0.3",
+    "@capacitor/keyboard": "^7.0.4",
+    "@nuxt/module-builder": "^1.0.3",
+    "@nuxt/schema": "^4.6.4",
+    "@nuxt/test-utils": "^4.3.3",
+    "@types/node": "latest",
+    "nuxt": "^4.6.4",
+    "typescript": "5.9.3",
+    "vitest": "^5.0.1",
+    "vue": "^3.5.0",
+    "vue-tsc": "^3.3.14"
+  }
+}
