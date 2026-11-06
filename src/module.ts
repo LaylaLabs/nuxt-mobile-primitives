@@ -7,6 +7,8 @@ import {
 import type { ModuleOptions } from "./types";
 
 export type * from "./types";
+export * from "./runtime/composables/useHaptics";
+export * from "./runtime/composables/useKeyboard";
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
